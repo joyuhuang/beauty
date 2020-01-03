@@ -2,27 +2,24 @@
 	background-color: #eae6e1;
 	width: 100%;
 	padding: 1%;
-	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	div {
 		text-align: center;
-		width: 17.8%;
+		width: 18%;
 		// // height: 29%;
-		// height: 0;
-		// padding-bottom: 17.8%;
 		margin: 1%;
 		flex-grow: 0;
 		flex-shrink: 0;
 		// font-weight: bold;
-		letter-spacing: 1px;
-		box-sizing: border-box;
+		// letter-spacing: 1px;
 		background-color: #fff;
 		background-position: center;
 		display: inline-block;
 		vertical-align: middle;
+		font-size: 0.9em;
 	}
 	div:not(.h1title) {
 		font-family: serif;
@@ -49,6 +46,7 @@
 		vertical-align: middle;
 	}
 }
+
 $bannerDivColors : #eae6e2, #eededb, #c7d1cd, #FFF, #e7e6e6, #c6d3cb, #efdedc;
 @for $i from 1 through 15 {
 	$n : $i / 2;
@@ -68,6 +66,21 @@ $bannerDivColors : #eae6e2, #eededb, #c7d1cd, #FFF, #e7e6e6, #c6d3cb, #efdedc;
 				background-size: 90% 90%;
 				background-repeat: no-repeat;
 			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	#banner {
+		flex-direction: row;
+		div {
+			width: 30%;
+			margin: 1.65%;
+			font-size: 14px;
+		}
+		div:not(.h1title) {
+			box-shadow: 1px 1px 4px 2px rgba(150, 150, 150, 0.5);
+			
 		}
 	}
 }

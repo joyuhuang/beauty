@@ -3,7 +3,7 @@
 // font-family: 'Noto Sans TC', sans-serif;  //中文字型
 // font-family: 'Cabin', sans-serif;  //英文字型("COCOTO"用)
 
-html,body,h1,h2,h3,h4,h5,h6,p,ol,ul {
+html,body,h1,h2,h3,h4,h5,h6,ol,ul {
     padding: 0;
     margin: 0;
 }
@@ -31,8 +31,14 @@ li {
 //   vertical-align: middle;
 // 	float: none !important; }
 	
-.h61 {height: 61.5%;}
-.h60 {height: 60%;}
+.h61 {
+	box-sizing: border-box;
+	height: 61.5%;
+}
+.h60 {
+	box-sizing: border-box;
+	height: 60%;
+}
 
 
 header {
@@ -53,6 +59,11 @@ header {
 nav>ul>li {
 	display: inline-block;
 	padding: 0 15px;
+}
+@media (min-width:2000px){
+	#logo {
+		width: 25%;
+	}
 }
 @media (max-width:600px){
 	#logo {

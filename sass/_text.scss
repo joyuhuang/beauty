@@ -1,19 +1,67 @@
 body {
-	font-size: 24px;
+	font-size: 45px;
 }
 
+@media (max-width: 2000px) {
+	body {
+		font-size: 30px;
+	}
+}
+@media (max-width: 1500px) {
+	body {
+		font-size: 28px;
+	}
+}
 @media (max-width: 1200px) {
 	body {
-		font-size: 18px;
+		font-size: 20px;
 	}
 }
 @media (max-width: 800px) {
 	body {
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 @media (max-width: 700px) {
 	body {
-		font-size: 14px;
+		font-size: 16px;
+	}
+}
+
+h2 {
+	font-size: 1.25em;
+	font-family: 'Cabin', 'Noto Sans TC', sans-serif;
+	letter-spacing: 1px;
+	color: #46433f;
+}
+h3 {
+	font-size: 1em;
+	color: #474441;
+	letter-spacing: 0.15em;
+}
+p {
+	font-size: 0.8em;
+	// line-height: 2.25em;
+	padding: 0.4em 0;
+	margin: 0;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+.enH2 {
+	display: block;
+	letter-spacing: 1px;
+	padding-bottom: 8px;
+	color: #8d988e;
+}
+@media (min-width:600px) {
+	.br_m {
+		content: " ";
+		&::after {content: "　";}
+	}
+}
+@media (max-width:600px) {
+	.br_d {
+		content: " ";
+		&::after {content: "　";}
 	}
 }

@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Cabin|M+PLUS+Rounded+1c|Noto+Sans+TC|Sawarabi+Mincho&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/fontawesome5/css/fontawesome.min.css">
 	<link rel="stylesheet" href="css/fontawesome5/css/solid.min.css">
+	<link rel="stylesheet" href="css/fontawesome5/css/brands.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.4.1.min.js"></script>
 </head>
@@ -43,11 +44,71 @@
 		<div>MAKEUP</div>
 		<div></div>
 	</div>
-
-
-
-
-
+	<div id="intro" class="h60">
+		<h2><span class="enH2">COCOTO</span>在不同文化和習俗之間<br>架起橋樑</h2>
+	</div>
+	<div id="about" class="h60">
+		<h2>萌芽於日本著眼於世界的<br>
+			COCOTO 株式會社<br class="br_m">具備結合貿易商品流通<br>
+			代理及創造品牌的堅強實力</h2>
+	</div>
+	<div id="business" class="h60">
+		<h2>OUR BUSINESS</h2>
+		<div>
+			<h3>國際貿易</h3>
+			<h3>代理經銷</h3>
+			<h3>客製化商品</h3>
+	</div>
+	</div>
+	<div id="client" class="h60">
+		<h2>OUR CLIENT</h2>
+		<h3>涵蓋國際貿易、跨境電商、<br class="br_d">大型超市及連鎖藥妝店</h3>
+			<p>SASA 卓越 天貓 京東</p>
+			<p>小紅書 唯品會 考拉</p>
+			<p>Amazon Costco</p>
+			<p>Walmart Rakuten</p>
+			<p>Cosme Watson</p>
+	</div>
+	<div id="mind" class="h60">
+		<h2><span class="enH2">PHILOSOPHY OF MIND</span>經營理念</h2>
+			<p>COCOTO株式會社<br>
+			秉持著日本茶道精神珍惜每次的相遇期待發展更多事業可能</p>
+			<p>CO-WORK 融合來自不同背景文化的思想，鼓勵員工發揮自我優勢及潛能</p><p>
+			COLLABORATE 以客戶為第一優先，重視合作關係，透過雙贏的模式強化彼此長期合作的信賴</p><p>
+			TOWARD DEVELOPMENT 在專業的國際採購及業務團隊合作開發下，持續穩定推出新產品</p>
+	</div>
+	<div id="life" class="h60">
+		<h2><span class="enH2">LIFE IS BEAUTIFUL</span>良い未來</h2>
+		<p>COCOTO株式會社，致力於將各地的美好傳遞到世界每個角落</p>
+		<p>一抹保留青春的保養品 | 一款舒服的香氛 | 一杯好喝的茶 | 一包吃得出健康的點心</p>
+		<p>在生活品質不斷提升中，為生活注入一點美好，更能大步邁開步伐，精神充沛的向前走</p>
+	</div>
+	<div id="products" class="h60">
+		<h2><span class="enH2">RECOMMENDED</span>推薦商品</h2>
+		<div>
+			<img src="images/product/p01.jpg" alt="">
+		<div>
+			<img src="images/product/p02-1.jpg" alt="">
+			<img src="images/product/p02-2.jpg" alt="">
+			<img src="images/product/p02-3.jpg" alt="">
+			<img src="images/product/p02-4.jpg" alt="">
+		</div>
+			<img src="images/product/p03.jpg" alt="">
+			<img src="images/product/p04.jpg" alt="">
+		</div>
+	</div>
+	<footer>
+		<h2>COCOTO 株式会社</h2>
+		<p>〒100-6208 東京都千代田区丸の内1-11-1パシフィックセンチュリープレイス丸の内8階109室</p>
+		<p>T 03-6860-8236　F 03-6860-8201　Linkworld02@cocotoint.co.jp</p>
+		<div>
+			<i class="fab fa-line"></i>
+			<i class="fab fa-instagram"></i>
+			<i class="fab fa-facebook-f"></i>
+			<i class="fas fa-phone-alt"></i>
+			<i class="fab fa-twitter"></i>
+		</div>
+	</footer>
 
 	<script>
 		$(document).ready(function(){
@@ -61,10 +122,14 @@
 			wdth=$(window).width();
 			wdthDiv=$('#banner>div').width();
 			// console.log(wdth);
-			$('.h61').css("height", wdth * 0.615);
-			$('.h60').css("height", wdth * 0.6);
+			if(wdth > 600){
+				$('.h61').css("height", wdth * 0.615);
+				$('.h60').css("height", wdth * 0.6);
+			}else{
+				$('.h61').css("height", wdth * 1.67);
+				$('.h60').css("height", wdth);
+			}
 			$('#banner>div').css("height", wdthDiv);
-			$('#banner>h1').css("height", wdthDiv);
 		}
 		chH();
 		$(window).resize(chH);
