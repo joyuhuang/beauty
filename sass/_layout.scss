@@ -1,5 +1,7 @@
 // font-family: 'M PLUS Rounded 1c', sans-serif;  //日文字型
+// font-family: 'Sawarabi Mincho', sans-serif;  //日文襯線字型
 // font-family: 'Noto Sans TC', sans-serif;  //中文字型
+// font-family: 'Cabin', sans-serif;  //英文字型("COCOTO"用)
 
 html,body,h1,h2,h3,h4,h5,h6,p,ol,ul {
     padding: 0;
@@ -29,6 +31,9 @@ li {
 //   vertical-align: middle;
 // 	float: none !important; }
 	
+.h61 {height: 61.5%;}
+.h60 {height: 60%;}
+
 
 header {
 	padding: 15px;

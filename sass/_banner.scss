@@ -1,20 +1,73 @@
 #banner {
 	background-color: #eae6e1;
 	width: 100%;
+	padding: 1%;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	height: 90%;
-	// padding-bottom: 60%;
-
 	div {
-		flex-basis: 30%;
+		text-align: center;
+		width: 17.8%;
+		// // height: 29%;
+		// height: 0;
+		// padding-bottom: 17.8%;
 		margin: 1%;
-		background-color: #ffaacc;
+		flex-grow: 0;
+		flex-shrink: 0;
+		// font-weight: bold;
+		letter-spacing: 1px;
+		box-sizing: border-box;
+		background-color: #fff;
+		background-position: center;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	div:not(.h1title) {
+		font-family: serif;
+		// padding-top: 8.3%;
+		box-shadow: 1px 1px 4px 2px rgba(150, 150, 150, 0.5);
+		
+	}
+	div::before {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+	.h1title {
+		border-radius: 50%;
 	}
 	h1 {
-		text-align: justify;
-		width: 30%;
+		font-size: 1em;
+		font-family: 'Cabin', 'Sawarabi Mincho', sans-serif;
+		letter-spacing: 0.15em;
+		line-height: 2.5em;
+		// padding-top: 4.5%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+$bannerDivColors : #eae6e2, #eededb, #c7d1cd, #FFF, #e7e6e6, #c6d3cb, #efdedc;
+@for $i from 1 through 15 {
+	$n : $i / 2;
+	#banner>div:nth-child(#{$i}) {
+		@if $i % 2 != 0 {
+			background-image: url('../images/b#{$i}.jpg');
+			background-size: 90%;
+			background-repeat: no-repeat;
+		} @else {
+			@if $n==3 OR $n ==5 {
+				background-image: linear-gradient(#FFF,#FFF),
+				linear-gradient(nth($bannerDivColors, $n),nth($bannerDivColors, $n));
+				background-size: 85% 85%, 90% 90%;
+				background-repeat: no-repeat;
+			} @else if $n!=4 {
+				background-image: linear-gradient(nth($bannerDivColors, $n),nth($bannerDivColors, $n));
+				background-size: 90% 90%;
+				background-repeat: no-repeat;
+			}
+		}
 	}
 }

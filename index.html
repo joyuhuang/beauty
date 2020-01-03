@@ -6,10 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>COCOTO株式会社</title>
-	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin|M+PLUS+Rounded+1c|Noto+Sans+TC|Sawarabi+Mincho&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/fontawesome5/css/fontawesome.min.css">
 	<link rel="stylesheet" href="css/fontawesome5/css/solid.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 			</ul>
 		</nav>
 	</header>
-	<div id="banner">
+	<div id="banner" class="h61">
 		<div></div>
 		<div>FOOD</div>
 		<div></div>
@@ -33,7 +34,7 @@
 		<div></div>
 		<div>LIFE STYLE</div>
 		<div></div>
-		<h1>COCOTO<br>株式会社</h1>
+		<div class="h1title"><h1>COCOTO<br>株式会社</h1></div>
 		<div></div>
 		<div>FASHION</div>
 		<div></div>
@@ -49,22 +50,25 @@
 
 
 	<script>
-		document.getElementById('bar').onclick=function () {
-			var menu = document.getElementById('menu');
-			if (menu.classList) {
-				menu.classList.toggle("showNav");
-				document.getElementById('bar').classList.toggle("bar_open");
-			} else {
-				// For IE9
-				var classes = menu.className.split(" ");
-				var i = classes.indexOf("showNav");
-				if (i >= 0)
-					classes.splice(i, 1);
-				else
-					classes.push("showNav");
-				menu.className = classes.join(" ");
-			}
+		$(document).ready(function(){
+		$('#bar').click(function () {
+			$('#bar').toggleClass('bar_open')
+			$('#menu').toggle();			
+		});
+		
+		var wdth=$(window).width();
+		function chH() {
+			wdth=$(window).width();
+			wdthDiv=$('#banner>div').width();
+			// console.log(wdth);
+			$('.h61').css("height", wdth * 0.615);
+			$('.h60').css("height", wdth * 0.6);
+			$('#banner>div').css("height", wdthDiv);
+			$('#banner>h1').css("height", wdthDiv);
 		}
+		chH();
+		$(window).resize(chH);
+	});
 
 	</script>
 </body>
