@@ -570,13 +570,23 @@ nav > ul > li {
   #business div h3::before {
     margin-bottom: 10px;
   }
+  #client p {
+    line-height: 2em;
+  }
   #mind {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     padding-bottom: 35%;
     background-position: bottom center;
   }
+  #mind h2 {
+    margin-top: 25%;
+  }
   #mind p {
+    width: 75%;
+    margin: auto;
+  }
+  #life p {
     width: 75%;
     margin: auto;
   }

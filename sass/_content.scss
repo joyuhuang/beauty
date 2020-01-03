@@ -134,11 +134,26 @@ $contentsId : 'intro', 'about', 'business', 'client', 'mind', 'life';
 			}
 		}
 	}
+	#client {
+		p {
+			line-height: 2em;
+		}
+	}
 	#mind {
 		box-sizing: content-box;
 		padding-bottom: 35%;
 		background-position: bottom center;
+		h2 {
+			margin-top: 25%;
+		}
 		p {
+			width: 75%;
+			margin: auto;
+		}
+	}
+	#life {
+
+		p{
 			width: 75%;
 			margin: auto;
 		}
