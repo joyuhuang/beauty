@@ -1,0 +1,82 @@
+// font-family: 'M PLUS Rounded 1c', sans-serif;  //日文字型
+// font-family: 'Noto Sans TC', sans-serif;  //中文字型
+
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul {
+    padding: 0;
+    margin: 0;
+}
+html,body {
+		height: 100%;
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei UI', 微軟正黑體, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+li {
+	list-style: none;
+}
+// .vam {
+//   font-size: 0px; }
+// .vam::before {
+//   content: "";
+//   height: 100%;
+//   vertical-align: middle;
+//   display: inline-block; }
+// .vam > * {
+//   font-size: 16px;
+//   display: inline-block;
+//   vertical-align: middle;
+// 	float: none !important; }
+	
+
+header {
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	max-width: 1440px;
+	margin: auto;
+}
+#bar {
+	font-size: 30px;
+	color: #c9c6c1;
+	display: none;
+	transition: transform 0.2s ease-in-out;
+}
+nav>ul>li {
+	display: inline-block;
+	padding: 0 15px;
+}
+@media (max-width:600px){
+	#logo {
+		max-width: 198px;
+		width: 50%;
+	}
+	#bar {display: block;}
+	nav{
+		position: relative;
+		ul {
+			display: none;
+			position: absolute;
+			top: 40px;
+			right: 0;
+			width: 200px;
+			padding: 10px;
+			background-color: #e9e6e2;
+			li {
+				display: block;
+				text-align: center;
+				padding: 15px;
+			}
+			li:not(:last-child){border-bottom: solid #ccc 1px;}
+		}
+	}
+}
+.showNav {
+	display: block;	
+}
+.bar_open {
+	transform: rotate(180deg);
+}

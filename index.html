@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>COCOTO株式会社</title>
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/fontawesome5/css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/fontawesome5/css/solid.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<img id="logo" src="images/logo.png" alt="COCOTO株式会社">
+		<nav>
+			<i class="fas fa-bars" id="bar"></i>
+			<ul id="menu">
+				<li><a href="#">TOP</a></li>
+				<li><a href="#">商品介紹</a></li>
+				<li><a href="#">企業情報</a></li>
+				<li><a href="#">SEARCH</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="banner">
+		<div></div>
+		<div>FOOD</div>
+		<div></div>
+		<div>HEALTH</div>
+		<div></div>
+		<div>LIFE STYLE</div>
+		<div></div>
+		<h1>COCOTO<br>株式会社</h1>
+		<div></div>
+		<div>FASHION</div>
+		<div></div>
+		<div>BEAUTY</div>
+		<div></div>
+		<div>MAKEUP</div>
+		<div></div>
+	</div>
+
+
+
+
+
+
+	<script>
+		document.getElementById('bar').onclick=function () {
+			var menu = document.getElementById('menu');
+			if (menu.classList) {
+				menu.classList.toggle("showNav");
+				document.getElementById('bar').classList.toggle("bar_open");
+			} else {
+				// For IE9
+				var classes = menu.className.split(" ");
+				var i = classes.indexOf("showNav");
+				if (i >= 0)
+					classes.splice(i, 1);
+				else
+					classes.push("showNav");
+				menu.className = classes.join(" ");
+			}
+		}
+
+	</script>
+</body>
+
+</html>

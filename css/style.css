@@ -1,0 +1,120 @@
+@charset "UTF-8";
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei UI', 微軟正黑體, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  max-width: 1440px;
+  margin: auto;
+}
+
+#bar {
+  font-size: 30px;
+  color: #c9c6c1;
+  display: none;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+@media (max-width: 600px) {
+  #logo {
+    max-width: 198px;
+    width: 50%;
+  }
+  #bar {
+    display: block;
+  }
+  nav {
+    position: relative;
+  }
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    background-color: #e9e6e2;
+  }
+  nav ul li {
+    display: block;
+    text-align: center;
+    padding: 15px;
+  }
+  nav ul li:not(:last-child) {
+    border-bottom: solid #ccc 1px;
+  }
+}
+
+.showNav {
+  display: block;
+}
+
+.bar_open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#banner {
+  background-color: #eae6e1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 90%;
+}
+
+#banner div {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin: 1%;
+  background-color: #ffaacc;
+}
+
+#banner h1 {
+  text-align: justify;
+  width: 30%;
+}
+/*# sourceMappingURL=style.css.map */
