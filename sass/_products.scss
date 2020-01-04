@@ -35,9 +35,13 @@
 		flex-wrap: wrap;
 		align-content: space-between;
 	}
-	#products>div>img, #products>div>div {
+	#products>div>img{
 			width: 45%;
 			height: 45%;
+			margin: 2%;
+		}
+		#products>div>div {
+			width: 45%;
 			margin: 2%;
 		}
 }
