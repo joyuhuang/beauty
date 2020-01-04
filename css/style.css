@@ -615,7 +615,7 @@ nav > ul > li {
 
 #products div img, #products div div {
   width: 22%;
-  display: block;
+  height: 22%;
 }
 
 #products div div {
