@@ -613,12 +613,13 @@ nav > ul > li {
       justify-content: space-around;
 }
 
-#products div img, #products div div {
+#products div img {
   width: 22%;
-  height: auto;
+  height: 22%;
 }
 
 #products div div {
+  width: 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -633,7 +634,7 @@ nav > ul > li {
 
 #products div div img {
   width: 45%;
-  height: auto;
+  height: 45%;
 }
 
 @media (max-width: 600px) {

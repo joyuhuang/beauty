@@ -9,18 +9,19 @@
 	div {
 		display: flex;
 		justify-content: space-around;
-		img,div {
+		img {
 			width: 22%;
-			height: auto;
+			height: 22%;
 		}
 		div {
+			width: 22%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-content: space-between;
 			img {
 				width: 45%;
-				height: auto;
+				height: 45%;
 			}
 		}
 	}
