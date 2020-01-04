@@ -11,6 +11,7 @@
 		justify-content: space-around;
 		img,div {
 			width: 22%;
+			// display: block;
 		}
 		div {
 			display: flex;
@@ -25,10 +26,10 @@
 	}
 }
 @media (max-width:600px) {
-	#products {
-		box-sizing: content-box;
-		padding-bottom: 40%;
-	}
+	// #products {
+	// 	box-sizing: content-box;
+	// 	padding-bottom: 40%;
+	// }
 	#products>div {
 		flex-wrap: wrap;
 		align-content: space-between;

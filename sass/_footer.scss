@@ -1,17 +1,16 @@
 footer {
 	padding: 15px;
 	text-align: center;
-	color: #b19a78;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
+	h2, p, a {color: #b19a78;}
 	h2 {
-		color: #b19a78;
 		margin-top: 10%;
 		margin-bottom: 5%;
 		font-weight: normal;		
 	}
 	div {
 		margin-top: 8% ;
-		i {
+		a>i {
 			font-size: 1.25em;
 			box-sizing: border-box;
 			width: 1.5em;

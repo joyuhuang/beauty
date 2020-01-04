@@ -141,6 +141,12 @@ nav > ul > li {
   padding: 0 15px;
 }
 
+@media (min-width: 1200px) {
+  nav > ul > li {
+    font-size: 0.75em;
+  }
+}
+
 @media (min-width: 2000px) {
   #logo {
     width: 25%;
@@ -457,7 +463,7 @@ nav > ul > li {
   margin-top: 20%;
   text-align: center;
   line-height: 2.25em;
-  color: #4f4e77;
+  color: #626275;
   letter-spacing: 0.15em;
 }
 
@@ -553,15 +559,11 @@ nav > ul > li {
   #intro > h2 {
     width: 50%;
   }
-  #business {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-    padding-bottom: 100%;
-  }
   #business div {
     display: block;
     width: 40%;
-    margin: 20% auto 0;
+    max-width: 200px;
+    margin: 21% auto 0;
   }
   #business div h3 {
     margin-bottom: 25px;
@@ -634,11 +636,6 @@ nav > ul > li {
 }
 
 @media (max-width: 600px) {
-  #products {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-    padding-bottom: 40%;
-  }
   #products > div {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -655,12 +652,14 @@ nav > ul > li {
 footer {
   padding: 15px;
   text-align: center;
-  color: #b19a78;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-footer h2 {
+footer h2, footer p, footer a {
   color: #b19a78;
+}
+
+footer h2 {
   margin-top: 10%;
   margin-bottom: 5%;
   font-weight: normal;
@@ -670,7 +669,7 @@ footer div {
   margin-top: 8%;
 }
 
-footer div i {
+footer div a > i {
   font-size: 1.25em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

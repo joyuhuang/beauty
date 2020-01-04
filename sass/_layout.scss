@@ -60,6 +60,11 @@ nav>ul>li {
 	display: inline-block;
 	padding: 0 15px;
 }
+@media (min-width:1200px){
+	nav>ul>li {
+		font-size: 0.75em;
+	}
+}
 @media (min-width:2000px){
 	#logo {
 		width: 25%;
