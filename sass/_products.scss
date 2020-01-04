@@ -11,7 +11,7 @@
 		justify-content: space-around;
 		img,div {
 			width: 22%;
-			height: 22%;
+			height: auto;
 		}
 		div {
 			display: flex;
@@ -20,7 +20,7 @@
 			align-content: space-between;
 			img {
 				width: 45%;
-				height: 45%;
+				height: auto;
 			}
 		}
 	}

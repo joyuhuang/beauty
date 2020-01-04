@@ -615,7 +615,7 @@ nav > ul > li {
 
 #products div img, #products div div {
   width: 22%;
-  height: 22%;
+  height: auto;
 }
 
 #products div div {
@@ -633,7 +633,7 @@ nav > ul > li {
 
 #products div div img {
   width: 45%;
-  height: 45%;
+  height: auto;
 }
 
 @media (max-width: 600px) {
