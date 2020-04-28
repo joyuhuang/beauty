@@ -27,7 +27,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 815px) {
   body {
     font-size: 16px;
   }
@@ -124,6 +124,18 @@ header {
   background-color: #fff;
   max-width: 1440px;
   margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 999;
+}
+
+#logo {
+  max-width: 165px;
+  width: 50%;
 }
 
 #bar {
@@ -141,6 +153,41 @@ nav > ul > li {
   padding: 0 15px;
 }
 
+header.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-animation: headerAni 0.8s;
+          animation: headerAni 0.8s;
+  background-color: #ffffff;
+}
+
+header.fixed #logo {
+  max-width: 100px;
+}
+
+@-webkit-keyframes headerAni {
+  0% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes headerAni {
+  0% {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 @media (min-width: 1200px) {
   nav > ul > li {
     font-size: 0.75em;
@@ -150,14 +197,11 @@ nav > ul > li {
 @media (min-width: 2000px) {
   #logo {
     width: 25%;
+    max-width: 380px;
   }
 }
 
 @media (max-width: 600px) {
-  #logo {
-    max-width: 198px;
-    width: 50%;
-  }
   #bar {
     display: block;
   }
@@ -168,10 +212,11 @@ nav > ul > li {
     display: none;
     position: absolute;
     top: 40px;
-    right: 0;
+    right: -15px;
     width: 200px;
     padding: 10px;
-    background-color: #e9e6e2;
+    background-color: #ffffff;
+    border: #c9c6c1 1px solid;
   }
   nav ul li {
     display: block;
@@ -463,7 +508,7 @@ nav > ul > li {
   margin-top: 20%;
   text-align: center;
   line-height: 2.25em;
-  color: #6b6b75;
+  color: #474766;
   letter-spacing: 0.15em;
 }
 
@@ -516,7 +561,7 @@ nav > ul > li {
 
 #client h2 {
   margin-top: 6%;
-  color: #8d988e;
+  color: #6b6b75;
 }
 
 #client h3 {
@@ -525,8 +570,8 @@ nav > ul > li {
 }
 
 #client p {
-  color: #6a6765;
-  line-height: 2.5em;
+  color: #eeeef0;
+  line-height: 2.2em;
 }
 
 #mind {
@@ -534,11 +579,11 @@ nav > ul > li {
 }
 
 #mind h2 {
-  margin-top: 12%;
+  margin-top: 10%;
 }
 
 #mind p {
-  color: #8f9491;
+  color: #6b6b75;
   padding-top: 3%;
 }
 
@@ -685,5 +730,166 @@ footer div a > i {
   border: solid 1px #b19a78;
   border-radius: 50%;
   margin: 0.1em;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomInBig {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale3d(1.4, 1.4, 1.4);
+            transform: scale3d(1.4, 1.4, 1.4);
+  }
+}
+
+@keyframes zoomInBig {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale3d(1.4, 1.4, 1.4);
+            transform: scale3d(1.4, 1.4, 1.4);
+  }
+}
+
+.zoomInBig {
+  -webkit-animation-name: zoomInBig;
+          animation-name: zoomInBig;
+}
+
+@-webkit-keyframes zoomInBig2 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    -webkit-transform: scale3d(1.6, 1.6, 1.6);
+            transform: scale3d(1.6, 1.6, 1.6);
+  }
+}
+
+@keyframes zoomInBig2 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    -webkit-transform: scale3d(1.6, 1.6, 1.6);
+            transform: scale3d(1.6, 1.6, 1.6);
+  }
+}
+
+.zoomInBig2 {
+  z-index: 1;
+  -webkit-animation-name: zoomInBig2;
+          animation-name: zoomInBig2;
+  -webkit-animation-duration: 2.05s;
+          animation-duration: 2.05s;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+
+.note {
+  color: #aeaeae;
+  font-size: 12px;
+  margin-top: 15px;
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */

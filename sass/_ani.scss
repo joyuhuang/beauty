@@ -1,0 +1,122 @@
+// @keyframes zoomRotate {
+//   from,
+//   20%,
+//   40%,
+//   60%,
+//   80%,
+//   to {
+//     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+//   }
+
+//   0% {
+//     opacity: 0;
+//     transform: scale3d(0.3, 0.3, 0.3) rotate(180deg);
+//   }
+
+//   60% {
+//     transform: scale3d(1.3, 1.3, 1.3) rotate(10deg);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: scale3d(1, 1, 1);
+//   }
+// }
+
+// .zoomRotate {
+//   animation-duration: 1.2s;
+//   animation-name: zoomRotate;
+// }
+
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+
+@keyframes zoomInBig {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+	}
+	
+	75% {
+		transform: scale3d(1.4, 1.4, 1.4);
+	}
+}
+
+.zoomInBig {
+	animation-name: zoomInBig;
+}
+
+
+
+@keyframes zoomInBig2 {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+	}
+	
+	65% {
+		transform: scale3d(1.6, 1.6, 1.6);
+	}
+}
+.zoomInBig2 {
+	z-index: 1;
+	animation-name: zoomInBig2;
+	animation-duration: 2.05s;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.5;
+  }
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	// animation-duration: 1.5s;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}

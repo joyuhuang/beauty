@@ -49,6 +49,14 @@ header {
 	background-color: #fff;
 	max-width: 1440px;
 	margin: auto;
+	position: absolute; left: 0; top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 999;
+}
+#logo {
+	max-width: 165px;
+	width: 50%;
 }
 #bar {
 	font-size: 30px;
@@ -60,6 +68,21 @@ nav>ul>li {
 	display: inline-block;
 	padding: 0 15px;
 }
+header.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	animation: headerAni 0.8s;
+	background-color: #ffffff;
+	#logo {
+		max-width: 100px;
+	}
+}
+@keyframes headerAni{
+  0% { transform: translateY(-150px); }
+  100% { transform: translateY(0px); }
+}
+
 @media (min-width:1200px){
 	nav>ul>li {
 		font-size: 0.75em;
@@ -68,13 +91,11 @@ nav>ul>li {
 @media (min-width:2000px){
 	#logo {
 		width: 25%;
+		max-width: 380px;
 	}
 }
 @media (max-width:600px){
-	#logo {
-		max-width: 198px;
-		width: 50%;
-	}
+	
 	#bar {display: block;}
 	nav{
 		position: relative;
@@ -82,10 +103,11 @@ nav>ul>li {
 			display: none;
 			position: absolute;
 			top: 40px;
-			right: 0;
+			right: -15px;
 			width: 200px;
 			padding: 10px;
-			background-color: #e9e6e2;
+			background-color: #ffffff;
+			border: #c9c6c1 1px solid;
 			li {
 				display: block;
 				text-align: center;
