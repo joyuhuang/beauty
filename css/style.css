@@ -122,7 +122,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  max-width: 1440px;
   margin: auto;
   position: absolute;
   left: 0;
@@ -162,8 +161,34 @@ header.fixed {
   background-color: #ffffff;
 }
 
-header.fixed #logo {
-  max-width: 100px;
+@media (max-width: 1440px) {
+  header {
+    max-width: 1440px;
+  }
+  header.fixed #logo {
+    max-width: 100px;
+  }
+}
+
+@media (min-width: 1441px) {
+  header::before {
+    content: "";
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  header::after {
+    content: "";
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  header nav {
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+    text-align: right;
+  }
 }
 
 @-webkit-keyframes headerAni {
@@ -196,8 +221,10 @@ header.fixed #logo {
 
 @media (min-width: 2000px) {
   #logo {
-    width: 25%;
-    max-width: 380px;
+    max-width: 300px;
+  }
+  nav li a {
+    font-size: 36px;
   }
 }
 

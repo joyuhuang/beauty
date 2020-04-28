@@ -47,7 +47,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	background-color: #fff;
-	max-width: 1440px;
+	
 	margin: auto;
 	position: absolute; left: 0; top: 0;
 	width: 100%;
@@ -74,10 +74,32 @@ header.fixed {
 	top: 0;
 	animation: headerAni 0.8s;
 	background-color: #ffffff;
-	#logo {
+}
+@media (max-width:1440px){
+	header {
+		max-width: 1440px;
+	}
+	header.fixed #logo {
 		max-width: 100px;
 	}
 }
+@media (min-width:1441px){
+	header {
+		&::before {
+			content: "";
+			flex-grow: 1;
+		}
+		&::after {
+			content: "";
+			flex-grow: 1;
+		}
+		nav {
+			flex-grow: 5;
+			text-align: right;
+		}
+	}
+}
+
 @keyframes headerAni{
   0% { transform: translateY(-150px); }
   100% { transform: translateY(0px); }
@@ -90,8 +112,11 @@ header.fixed {
 }
 @media (min-width:2000px){
 	#logo {
-		width: 25%;
-		max-width: 380px;
+		// width: 25%;
+		max-width: 300px;
+	}
+	nav li a {
+		font-size: 36px;
 	}
 }
 @media (max-width:600px){
